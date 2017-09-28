@@ -1,0 +1,111 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10/06/2017, 19:48:15
+    Author     : gustavo
+*/
+
+.q{
+    display: block;
+    margin-top: -10px;
+    position: relative;
+    left: 75px;
+}
+
+.q_cad{
+    display: block;
+    position: relative;
+    left: 220px;
+}
+
+.q_cad select{
+    width: 114px;
+    border: solid #a0a0a0 1px;
+}
+
+.select{
+    margin-top: 5px;
+    width: 250px;
+    border: solid #a0a0a0 1px;
+}
+
+.l_cad{
+    position: relative;
+    top:20px;
+}
+
+.input_texto{
+    border: solid #a0a0a0 1px;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.input_texto:focus{
+    border: solid #8B0000 1px;
+    background-color: #CDCDCD;
+}
+
+.l{
+    position: relative;
+    top:10px;
+}
+
+
+#acoes{    
+    text-align: center;
+    margin-top: 15px;
+    padding: 25px;
+}
+
+#acoes2{    
+    padding: 20px;
+}
+
+.action{
+    width: 120px;
+    border: 1px solid #666;
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    border-radius: 3px;
+    background-color: #CCC;
+    color: #000;
+    padding: 2px 7px;
+    cursor: pointer;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.action:hover{
+    border: 1px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    background-color: #999999;
+    color: #990033;
+}
+
+#center_form{
+    width: 350px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#center_form_cad{
+    width: 850px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#center_form_busca{
+    width: 920px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+span.spans_form{
+    margin-left: 45px;
+    display: block;
+    margin-top: 25px;
+}
