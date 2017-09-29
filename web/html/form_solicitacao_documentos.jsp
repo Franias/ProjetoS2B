@@ -6,7 +6,7 @@
     <input type="text" id="servidorSolicitante" class="q_cad input_texto"
            name="servidorSolicitante" size="40">
 
-    <label for="periodoSolicitacao" class="l_cad">Período Inicial da Solicitacao: </label>
+    <label for="periodoSolicitacao" class="l_cad">Período Inicial da Solicitação: </label>
     <div class="q_cad">
         <select name="anoInicial" id="ano">
             <option value="2017">2017</option> 
@@ -34,7 +34,7 @@
         </select>
     </div>
 
-    <label for="periodoSolicitacao" class="l_cad">Período Final da Solicitacao: </label><br>
+    <label for="periodoSolicitacao" class="l_cad">Período Final da Solicitação: </label><br>
     <div class="q_cad">
         <select name="anoFinal" id="ano">
             <option value="2017">2017</option>               
@@ -62,7 +62,7 @@
         </select>
     </div>
 
-    <label for="situacaoSolicitacao" class="l_cad">Situação da Solicitacao: </label><br>
+    <label for="situacaoSolicitacao" class="l_cad">Situação da Solicitação: </label><br>
 
     <div class="q_cad">
         <select name="situacao">
