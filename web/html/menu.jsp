@@ -10,7 +10,7 @@
         <!--Menu Drop down-->
         <li class="lista_default"><a href="index.jsp">Home</a></li>
 
-        <li class="lista_default"><a href="#">Usuarios</a>
+        <li class="lista_default"><a href="#">Usuários</a>
             <ul class="dropdown-content">
 
                 <li class="menu_lista_curta">
