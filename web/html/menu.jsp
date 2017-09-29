@@ -17,7 +17,7 @@
                     <a href="PerfilControl?op=LISTA">Listar Perfis</a>
                 </li>
 
-                <li class="menu_lista_curta"><a href="UsuarioControl?op=LISTA">Listar Usuarios</a></li>
+                <li class="menu_lista_curta"><a href="UsuarioControl?op=LISTA">Listar Usuários</a></li>
 
             </ul>
         </li>
@@ -27,9 +27,9 @@
                 <!--Se for logado como servidor mostra opção abaixo com base no filtro -->
                 <%if (usu.getPerfil().getNome().equals("servidor")) {%>
                 <li class="menu_lista_grande"><a href="formSolicitacao.jsp">Solicitar um documento oficial</a></li>
-                <li class="menu_lista_grande"><a href="pesquisaSolicitacaoDocumentos.jsp">Pesquisa de solicitacao de documentos</a></li>
+                <li class="menu_lista_grande"><a href="pesquisaSolicitacaoDocumentos.jsp">Pesquisa de solicitação de documentos</a></li>
                     <%} else if (usu.getPerfil().getNome().equals("gabinete")) {%>
-                <li class="menu_lista_grande"><a href="pesquisaSolicitacaoDocumentos.jsp">Pesquisa de solicitacao de documentos</a></li>
+                <li class="menu_lista_grande"><a href="pesquisaSolicitacaoDocumentos.jsp">Pesquisa de solicitação de documentos</a></li>
                     <%} else if (usu.getPerfil().getNome().equals("outros")) {%>
                 <li class="menu_lista_grande"><a href="consultarDocumento.jsp">Pesquisa de documentos oficiais</a></li>
                     <%}%>
