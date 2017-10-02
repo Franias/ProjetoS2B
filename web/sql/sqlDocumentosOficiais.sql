@@ -75,8 +75,8 @@ insert into usuarios (cpf,siape,sexo,nome,username,email,senha,id_perfil)
 values ('12360578',123454,'F','eduarda','eduarda','eduarda@gmail.com',MD5('1234'),1);
 
 insert into usuarios (cpf,siape,sexo,nome,username,email,senha,id_perfil) 
-values ('12361578',128454,'F','Francielli','Francielli','fran@gmail.com',MD5('1234'),2);
+values ('12361578',128454,'F','francielli','francielli','fran@gmail.com',MD5('1234'),2);
 
 insert into usuarios (cpf,siape,sexo,nome,username,email,senha,id_perfil) 
-values ('12221578',144454,'M','Andre','Andre','gstvcamargo@gmail.com',MD5('1234'),3);
+values ('12221578',144454,'M','andre','andre','andre@gmail.com',MD5('1234'),3);
 

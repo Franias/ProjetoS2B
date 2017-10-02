@@ -101,10 +101,17 @@ ul.listaMenu li a{
 }
 
 /*Trocar a cor do texto*/
-ul.listaMenu li a:hover,
+ul.listaMenu li a:hover{
+    
+    text-decoration:underline;      
+    
+    color: #000100;
+    }
+    
+    
 .listaMenu li .dropdown-content li a:hover{
-    color: #000000;
-    text-decoration: underline;  
+    background-image:linear-gradient(to bottom, #ccd5cd, #cdd5cc); 
+   color: #000100;
 
 }
 
@@ -123,6 +130,7 @@ ul.listaMenu li a:hover,
 .listaMenu li:hover .dropdown-content,
 .listaMenu li.over .dropdown-content{      
     display:block;
+    
 }
 
 /*Ajustes*/
@@ -131,23 +139,26 @@ ul.listaMenu li a:hover,
     text-align: left;
     top: 30px;   
     color: #E6E6E6;
+    background-color: #8a9588;
     border-bottom: 1px solid #E6E6E6;
     font-weight: normal;
     display:block; 
 }
 
 /*Tipo de menu*/
-.listaMenu li .dropdown-content .menu_lista_curta a{
+.listaMenu li .dropdown-content .menu_lista_curta {
     text-align: center;
     padding: 5px 2px 5px 5px;  
     width: 160px;
 }
 
-.listaMenu li .dropdown-content .menu_lista_grande a{   
+.listaMenu li .dropdown-content .menu_lista_grande{   
     position: relative;
     padding: 20px 2px 20px 3px;
     width: 220px;
+    
 }
+
 
 /*Formatação da Div geral*/
 #principal{
