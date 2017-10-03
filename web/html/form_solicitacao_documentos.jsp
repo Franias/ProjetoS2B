@@ -1,18 +1,18 @@
-<form action="DocumentoSolicitacaoControl" method="post">  
+<form action="DocumentoSolicitacaoControl" method="post" onsubmit="return validarPesquisaSolicitacao()()">  
 
     <input type="hidden" name="op" value="pesquisaSolicitacao">
 
-    <label for="servidorSolicitante" class="l_cad">Nome do Solicitante: </label>
-    <input type="text" id="servidorSolicitante" class="q_cad input_texto"
-           name="servidorSolicitante" size="40">
+    <!--<label for="servidorSolicitante" class="l_cad">Nome do Solicitante: </label>
+    <input type="text" id="servidorSolicitante" class="q_cad input_texto"*/
+           name="servidorSolicitante" size="40">-->
 
     <label for="periodoSolicitacao" class="l_cad">Período Inicial da Solicitação: </label>
     <div class="q_cad">
-        <select name="anoInicial" id="ano">
+        <select name="anoInicial" id="anoInicial">
             <option value="2017">2017</option> 
         </select>
 
-        <select name="mesInicial" id="mes">
+        <select name="mesInicial" id="mesInicial">
             <option value="01">janeiro</option>
             <option value="02">fevereiro</option>
             <option value="03">março</option>
@@ -27,7 +27,7 @@
             <option value="12">dezembro</option>
         </select>
 
-        <select name="diaInicial" id="dia">
+        <select name="diaInicial" id="diaInicial">
             <%for (int i = 1; i <= 31; i++) {%>
             <option value="<%=i%>"><%=i%></option> 
             <%}%>
@@ -36,11 +36,11 @@
 
     <label for="periodoSolicitacao" class="l_cad">Período Final da Solicitação: </label><br>
     <div class="q_cad">
-        <select name="anoFinal" id="ano">
+        <select name="anoFinal" id="anoFinal">
             <option value="2017">2017</option>               
         </select>
 
-        <select name="mesFinal" id="mes">
+        <select name="mesFinal" id="mesFinal">
             <option value="01">janeiro</option>
             <option value="02">fevereiro</option>
             <option value="03">março</option>
@@ -55,7 +55,7 @@
             <option value="12" selected>dezembro</option>
         </select>
 
-        <select name="diaFinal" id="dia">
+        <select name="diaFinal" id="diaFinal">
             <%for (int i = 1; i <= 31; i++) {%>
             <option value="<%=i%>"><%=i%></option> 
             <%}%>

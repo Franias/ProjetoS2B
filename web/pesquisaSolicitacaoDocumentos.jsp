@@ -12,6 +12,7 @@
         <link href="css/estiloGeral.css" rel="stylesheet" type="text/css">
         <link href="css/estiloForms.css" rel="stylesheet" type="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="js/validacaoDocumento.js" type="text/javascript"></script>
         <title>Pesquisa de Solicitações de Documentos Oficiais</title>
     </head>
     <body>

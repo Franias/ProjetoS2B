@@ -18,9 +18,9 @@ create table perfil (
     primary key (id)
 );
 
-insert into perfil values(null,'servidor','servidor','p');
-insert into perfil values(null,'gabinete','gabinete','p');
-insert into perfil values(null,'outros','outros','p');
+insert into perfil values(null,'servidor','servidor','pendente');
+insert into perfil values(null,'gabinete','gabinete','pendente');
+insert into perfil values(null,'outros','outros','pendente');
 
 create table usuarios (
     cpf varchar(11) not null,

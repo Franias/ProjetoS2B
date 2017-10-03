@@ -29,31 +29,51 @@ function validarData(dia, mes, ano) {
 
 }
 
+function validarPesquisaSolicitacao() {
+    var diaInicial = document.getElementById("diaInicial");
+    var mesInicial = document.getElementById("mesInicial");
+    var anoInicial = document.getElementById("anoInicial");
+
+    var diaFinal = document.getElementById("diaFinal");
+    var mesFinal = document.getElementById("mesFinal");
+    var anoFinal = document.getElementById("anoFinal");
+
+    if (!validarData(diaInicial, mesInicial, anoInicial) && !validarData(diaFinal, mesFinal, anoFinal)) {
+        alert("Data Inválida!");
+        return false;
+    } else if (!validarDataSolicitacao(diaInicial, mesInicial, anoInicial) && !validarDataSolicitacao(diaFinal, mesFinal, anoFinal)) {
+        aler("Data do documento não deve ser inferior a data corrente da solitação!");
+        return false;
+    } else
+        return true;
+}
+
 /**
  * 
  * @returns {Boolean} se foi ou não validado
  */
 function validarFormularioSolicitacao() {
-    
+
     var dia = document.getElementById("dia");
     var mes = document.getElementById("mes");
     var ano = document.getElementById("ano");
-    
+
     //alert(dia.value + "" + mes.value + "" + ano.value);
-    
+
     if (!validarData(dia, mes, ano)) {
         alert("Data invalida!");
         return false;
-        
-    }else if(!validarDataSolicitacao(dia,mes,ano)){   
-        
+
+    } else if (!validarDataSolicitacao(dia, mes, ano)) {
+
         alert("Data do documento "
-                    + "não deve ser inferior a data corrente da solicitação.");
-            
+                + "não deve ser inferior a data corrente da solicitação.");
+
         return false;
-        
-    } else return true;
-    
+
+    } else
+        return true;
+
 }//fecha método
 
 /**
@@ -63,8 +83,8 @@ function validarFormularioSolicitacao() {
  * @param {type} ano selecionado
  * @returns {Boolean|Object} true se ele for maior ou igual a data do sistema
  */
-function validarDataSolicitacao(dia,mes,ano){
-    
+function validarDataSolicitacao(dia, mes, ano) {
+
     var data = new Date();
     //pega o dia do sistema
     var diaAtual = data.getDate();
@@ -80,5 +100,7 @@ function validarDataSolicitacao(dia,mes,ano){
     //alert(flagMes);
     //verifica o ano
     return (ano.value >= anoAtual && (flagMes || mes.value > mesAtual));
-     
+
 }
+
+
