@@ -5,6 +5,8 @@
  */
 package br.edu.ifrs.modelo.bean;
 
+import br.edu.ifrs.util.ValidacaoServidor;
+
 /**
  *
  * @author DTI
@@ -101,8 +103,13 @@ public class Usuario {
     /**
      * @param cpf the cpf to set
      */
-    public void setCpf(String cpf) {
+    public void setCpf(String cpf) throws Exception {
+        if(ValidacaoServidor.validarCPF(cpf)){
         this.cpf = cpf;
+        }else{
+            throw new Exception("CPF Inválido!");
+        }
+    
     }
 
     /**
