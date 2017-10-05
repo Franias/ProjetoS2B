@@ -50,7 +50,7 @@
                     <a href="index.jsp"><img src="img/home.png" title="ir para início"
                                              alt="ir para início" height="20"></a>
 
-                    <a href="#"><img src="img/lapis.png" title="Novo perfil"
+                    <a href="#"><img src="img/addUser.png" title="Novo perfil"
                                      alt="novo perfil" height="18"></a>
                     <!--Formulário da tabela -->
                     <form action="PerfilControl" method="POST"> 
