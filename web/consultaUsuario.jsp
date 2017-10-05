@@ -48,7 +48,7 @@
                     <a href="index.jsp"><img src="img/home.png" title="ir para início"
                                              alt="ir para início" height="20"></a>
                     
-                    <a href="UsuarioControl?op=NOVO"><img src="img/lapis.png" title="Novo usuário"
+                    <a href="UsuarioControl?op=NOVO"><img src="img/addUser.png" title="Novo usuário"
                                              alt="novo usuário" height="18"></a>
                     
                     <!--Formulário da tabela -->
