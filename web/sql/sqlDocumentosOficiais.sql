@@ -14,7 +14,7 @@ create table perfil (
     id int auto_increment,
     nome varchar(50) not null,
     descricao text,
-    situacao varchar(1) not null,
+    situacao varchar(10) not null,
     primary key (id)
 );
 
@@ -32,7 +32,7 @@ create table usuarios (
     telefone varchar(25),
     username varchar(50),
     senha varchar(255),
-    situacao varchar(20),
+    situacao varchar(1),
     observacoes text,
     id_setor int,
     id_perfil int,
@@ -72,11 +72,11 @@ insert into setores values (-1, 'Nenhum', -1);
 
 /*usuário para testes */
 insert into usuarios (cpf,siape,sexo,nome,username,email,senha,id_perfil) 
-values ('86992929020',123454,'F','eduarda','eduarda','eduarda@gmail.com',MD5('1234'),1);
+values ('86992929020',12345489,'F','eduarda','eduarda','eduarda@gmail.com',MD5('1234'),1);
 
 insert into usuarios (cpf,siape,sexo,nome,username,email,senha,id_perfil) 
-values ('86992929020',128454,'F','francielli','francielli','fran@gmail.com',MD5('1234'),2);
+values ('12361578',128454,'F','francielli','francielli','fran@gmail.com',MD5('1234'),2);
 
 insert into usuarios (cpf,siape,sexo,nome,username,email,senha,id_perfil) 
-values ('86992929020',144454,'M','andre','andre','andre@gmail.com',MD5('1234'),3);
+values ('12221578',144454,'M','andre','andre','andre@gmail.com',MD5('1234'),3);
 

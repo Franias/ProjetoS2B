@@ -37,15 +37,19 @@ function validarPesquisaSolicitacao() {
     var diaFinal = document.getElementById("diaFinal");
     var mesFinal = document.getElementById("mesFinal");
     var anoFinal = document.getElementById("anoFinal");
-
-    if (!validarData(diaInicial, mesInicial, anoInicial) && !validarData(diaFinal, mesFinal, anoFinal)) {
+    
+    //codigo mudado para "ou", assim ele não aceita que nenhuma das datas seja invalida.
+    if (!validarData(diaInicial, mesInicial, anoInicial) || !validarData(diaFinal, mesFinal, anoFinal)) {
         alert("Data Inválida!");
         return false;
-    } else if (!validarDataSolicitacao(diaInicial, mesInicial, anoInicial) && !validarDataSolicitacao(diaFinal, mesFinal, anoFinal)) {
+    }
+
+    if (!validarDataSolicitacao(diaInicial, mesInicial, anoInicial) || !validarDataSolicitacao(diaFinal, mesFinal, anoFinal)) {
         aler("Data do documento não deve ser inferior a data corrente da solitação!");
         return false;
-    } else
-        return true;
+    }
+
+    return true;
 }
 
 /**

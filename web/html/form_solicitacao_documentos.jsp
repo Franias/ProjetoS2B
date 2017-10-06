@@ -1,4 +1,4 @@
-<form action="DocumentoSolicitacaoControl" method="post" onsubmit="return validarPesquisaSolicitacao()()">  
+<form action="DocumentoSolicitacaoControl" method="post" onsubmit="return validarPesquisaSolicitacao()">  
 
     <input type="hidden" name="op" value="pesquisaSolicitacao">
 
