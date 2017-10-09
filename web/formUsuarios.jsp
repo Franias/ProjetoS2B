@@ -44,19 +44,19 @@
                         <fieldset>
                             <input type="hidden" name="op" id="op" value="<%= (usu.getCpf().equals("") ? "INSERIR" : "ATUALIZAR")%>">
 
-                            <label for="cpf" class="l_cad">CPF: </label>
+                            <label for="cpf" class="l_cad">*CPF: </label>
                             <input type="text" name="cpf" id="cpf" class="q_cad input_texto"
                                    size="20" value="<%= usu.getCpf()%>" <%= (usu.getCpf().equals("") ? "" : "readonly=\"true\"")%> required>
 
-                            <label for="matricula" class="l_cad">Matrícula: </label>
-                            <input type="text" name="matricula" class="q_cad input_texto"
-                                   id="matricula" value="<%= usu.getMatricula()%>" size="10">
+                            <label for="matricula" class="l_cad">*Matrícula: </label>
+                            <input type="text" name="matricula" class="q_cad input_texto" required
+                                   id="matricula" placeholder="<%= usu.getMatricula()%>" size="10">
 
-                            <label for="nome" class="l_cad">* Nome: </label>
+                            <label for="nome" class="l_cad">*Nome: </label>
                             <input type="text" name="nome" class="q_cad input_texto"
-                                   id="nome" size="50" value="<%= usu.getNome()%>" required>
+                                   id="nome" size="50" placeholder="<%= usu.getNome()%>" required>
 
-                            <label for="sexo" class="l_cad">* Sexo: </label>
+                            <label for="sexo" class="l_cad">*Sexo: </label>
                             <div class="q_cad">
                                 <input type="radio" name="sexo" id="feminino" 
                                        value="F" <%= (usu.getSexo().equals("F") ? "checked" : "")%> required><label for="feminino">Feminino</label>
@@ -75,7 +75,7 @@
                             <input type="text" name="telefone" class="q_cad input_texto"
                                    id="telefone"  value="<%= usu.getTelefoneResidencial()%>" size="20"><br>
 
-                            <label for="perfil" class="l_cad">* Perfil: </label>
+                            <label for="perfil" class="l_cad">*Perfil: </label>
                             <select name="perfil" id="perfil" class="q_cad select">
                                 <%
                                     Perfil[] perfis = (request.getAttribute("perfis") == null ? new Perfil[0] : (Perfil[]) request.getAttribute("perfis"));
@@ -87,7 +87,7 @@
                                 %>
                             </select>
 
-                            <label for="setor" class="l_cad">* Setor: </label>
+                            <label for="setor" class="l_cad">*Setor: </label>
                             <select name="setor" id="setor" class="q_cad select">
                                 <%
                                     Setor[] setores = (request.getAttribute("setores") == null ? new Setor[0] : (Setor[]) request.getAttribute("setores"));
@@ -99,15 +99,15 @@
                                 %>
                             </select>
 
-                            <label for="username" class="l_cad">* Username: </label>
-                            <input type="text" name="username" class="q_cad input_texto"
+                            <label for="username" class="l_cad">*Username: </label>
+                            <input type="text" name="username" class="q_cad input_texto" required
                                    id="username" value="<%= usu.getUsername()%>" size="30">
 
                             <%
                                 if (usu.getCpf().equals("")) {
                             %>
-                            <label for="senha" class="l_cad">* Senha: </label>
-                            <input type="password" name="senha" class="q_cad input_texto"
+                            <label for="senha" class="l_cad">*Senha: </label>
+                            <input type="password" name="senha" class="q_cad input_texto" required
                                    id="senha" size="20">
 
                             <label for="confsenha" class="l_cad">Confimar Senha: </label>
@@ -117,9 +117,9 @@
                                 }
                             %>
 
-                            <label for="situacao" class="l_cad">* Situação: </label>
+                            <label for="situacao" class="l_cad">*Situação: </label>
                             <div class="q_cad">
-                                <input type="radio" name="situacao" id="sitativo" value="A" <%= (usu.getSituacao().equals("A") ? "checked" : "")%>><label for="sitativo">Ativo</label>
+                                <input type="radio" name="situacao" id="sitativo" value="A" required <%= (usu.getSituacao().equals("A") ? "checked" : "")%>><label for="sitativo">Ativo</label>
                                 <input type="radio" name="situacao" id="sitinativo" value="I" <%= (usu.getSituacao().equals("I") ? "checked" : "")%>><label for="sitinativo">Inativo</label>
                             </div>
                             <div id="acoes">

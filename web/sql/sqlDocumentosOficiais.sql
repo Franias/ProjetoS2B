@@ -72,11 +72,11 @@ insert into setores values (-1, 'Nenhum', -1);
 
 /*usuário para testes */
 insert into usuarios (cpf,siape,sexo,nome,username,email,senha,id_perfil) 
-values ('86992929020',12345489,'F','eduarda','eduarda','eduarda@gmail.com',MD5('1234'),1);
+values ('02384516906',12345489,'F','eduarda','eduarda','eduarda@gmail.com',MD5('1234'),1);
 
 insert into usuarios (cpf,siape,sexo,nome,username,email,senha,id_perfil) 
-values ('12361578',128454,'F','francielli','francielli','fran@gmail.com',MD5('1234'),2);
+values ('92154876030',128454,'F','francielli','francielli','fran@gmail.com',MD5('1234'),2);
 
 insert into usuarios (cpf,siape,sexo,nome,username,email,senha,id_perfil) 
-values ('12221578',144454,'M','andre','andre','andre@gmail.com',MD5('1234'),3);
+values ('32407168950',144454,'M','andre','andre','andre@gmail.com',MD5('1234'),3);
 
