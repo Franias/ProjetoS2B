@@ -83,7 +83,20 @@ public class ValidacaoServidor {
             Integer digito2 = calcularDigito(cpf.substring(0,9)+digito1, pesoCPF);
             return cpf.equals(cpf.substring(0,9)+digito1.toString() + digito2.toString());
         }
+    
+    
+    public static boolean validarMatricula(String matricula){
+        if(matricula.length()== 8  ){
+            return true;
+        }else{
+            return false;
+            
+        }
     }
+    }
+
+
+    
 
 
 

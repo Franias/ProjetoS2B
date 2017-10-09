@@ -136,10 +136,13 @@ public class Usuario {
     /**
      * @param matricula the matricula to set
      */
-    public void setMatricula(String matricula) {
+    public void setMatricula(String matricula) throws Exception {
+        if(matricula.length() == 8){
         this.matricula = matricula;
+        }else{
+            throw new Exception("Matricula Inválida!");
+        }
     }
-
     /**
      * @return the sexo
      */
