@@ -12,22 +12,23 @@ import br.edu.ifrs.util.ValidacaoServidor;
  * @author DTI
  */
 public class Usuario {
+
     private String cpf;
     private String nome;
     private String matricula;
     private String sexo;
     private String endereco;
-    private String email; 
-    private String telefoneResidencial; 
+    private String email;
+    private String telefoneResidencial;
     private String telefoneProfissional;
     private String telefoneCelular;
     private Perfil perfil;
     private Setor setor;
     private String username;
-    private String senha; 
+    private String senha;
     private String situacao;
     private String observacoes;
-    
+
     public Usuario() {
         this.cpf = "";
         this.nome = "Novo usuário";
@@ -35,7 +36,7 @@ public class Usuario {
         this.sexo = "";
         this.endereco = "";
         this.email = "";
-        this.telefoneResidencial = ""; 
+        this.telefoneResidencial = "";
         this.telefoneProfissional = "";
         this.telefoneCelular = "";
         this.perfil = new Perfil();
@@ -47,7 +48,7 @@ public class Usuario {
     }
 
     /**
-     * 
+     *
      * @param cpf
      * @param nome
      * @param matricula
@@ -62,7 +63,7 @@ public class Usuario {
      * @param username
      * @param senha
      * @param situacao
-     * @param observacoes 
+     * @param observacoes
      * @author gustavo
      */
     public Usuario(String cpf, String nome, String matricula, String sexo, String endereco, String email, String telefoneResidencial, String telefoneProfissional, String telefoneCelular, Perfil perfil, Setor setor, String username, String senha, String situacao, String observacoes) {
@@ -85,13 +86,14 @@ public class Usuario {
 
     /**
      * Login
+     *
      * @param username
-     * @param senha 
+     * @param senha
      */
     public Usuario(String username, String senha) {
         this.username = username;
         this.senha = senha;
-    }       
+    }
 
     /**
      * @return the cpf
@@ -103,13 +105,14 @@ public class Usuario {
     /**
      * @param cpf the cpf to set
      */
-    public void setCpf(String cpf) throws Exception {
-        if(ValidacaoServidor.validarCPF(cpf)){
-        this.cpf = cpf;
-        }else{
-            throw new Exception("CPF Inválido!");
+    public void setCpf(String cpf) {
+
+        if (ValidacaoServidor.validarCPF(cpf)) {
+            this.cpf = cpf;
+        } else {
+            throw new NumberFormatException("CPF Inválido!");
         }
-    
+
     }
 
     /**
@@ -137,12 +140,13 @@ public class Usuario {
      * @param matricula the matricula to set
      */
     public void setMatricula(String matricula) throws Exception {
-        if(matricula.length() == 8){
-        this.matricula = matricula;
-        }else{
+        if (matricula.length() == 8) {
+            this.matricula = matricula;
+        } else {
             throw new Exception("Matricula Inválida!");
         }
     }
+
     /**
      * @return the sexo
      */
@@ -181,8 +185,12 @@ public class Usuario {
     /**
      * @param email the email to set
      */
-    public void setEmail(String email) {
+   public void setEmail(String email)throws Exception {
+        if(email.matches("^([0-9a-zA-Z]+([_.-]?[0-9a-zA-Z]+)*@[0-9a-zA-Z]+[0-9,a-z,A-Z,.,-]*(.){1}[a-zA-Z]{2,4})+$")){
         this.email = email;
+        }else{
+            throw new Exception("Email Inválido!");
+        }
     }
 
     /**
@@ -254,7 +262,7 @@ public class Usuario {
     public void setSetor(Setor setor) {
         this.setor = setor;
     }
-    
+
     /**
      * @return the username
      */
@@ -282,15 +290,15 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
+
     public void setSenha(String s, String cs) throws Exception {
-        if (s == null || s.equals("")) {
-            throw new Exception ("Senha deve ser preenchida com um valor numérico.");
+        if (!s.matches("^[0-9]+$")) {
+            throw new Exception("Senha deve ser preenchida com um valor numérico.");
         }
         if (!s.equals(cs)) {
-            throw new Exception ("Os campos senha e confirmação de senha devem ser idênticos.");
+            throw new Exception("Os campos senha e confirmação de senha devem ser idênticos.");
         }
-    
+
         setSenha(s);
     }
 

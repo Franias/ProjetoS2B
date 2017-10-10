@@ -13,7 +13,9 @@ import java.util.Date;
  * @author gustavo
  */
 public class ValidacaoServidor {
- private static final int[] pesoCPF = {11, 10, 9, 8, 7, 6, 5, 4, 3, 2};
+
+    private static final int[] pesoCPF = {11, 10, 9, 8, 7, 6, 5, 4, 3, 2};
+
     /**
      *
      * @param ano
@@ -38,8 +40,8 @@ public class ValidacaoServidor {
         return (dia <= meses[mes - 1] && dia >= 1);
 
     }
-    
-     /**
+
+    /**
      * Validar data do documento não deve ser inferior a data corrente da
      * solicitação.
      *
@@ -64,7 +66,8 @@ public class ValidacaoServidor {
         //verifica o ano
         return (ano >= anoAtual && (flagMes || mes > mesAtual));
     }
-    
+
+    //metodos criados para validar CPF, Matricula, Email
     //Metodo Validar CPF
     private static int calcularDigito(String str, int[] peso) {
         int soma = 0;
@@ -75,30 +78,42 @@ public class ValidacaoServidor {
         soma = 11 - soma % 11;
         return soma > 9 ? 0 : soma;
     }
+    
+    //metodos usados no teste
 
     public static boolean validarCPF(String cpf) {
-        if ((cpf == null) || (cpf.length() != 11))
-            return false; 
-            Integer digito1 = calcularDigito(cpf.substring(0,9), pesoCPF);
-            Integer digito2 = calcularDigito(cpf.substring(0,9)+digito1, pesoCPF);
-            return cpf.equals(cpf.substring(0,9)+digito1.toString() + digito2.toString());
-        }
-    
-    
-    public static boolean validarMatricula(String matricula){
-        if(matricula.length()== 8  ){
-            return true;
-        }else{
+        if (!cpf.matches("^[0-9]{11}$") || (cpf == null) || (cpf.length() != 11)) {
             return false;
-            
+        }
+        Integer digito1 = calcularDigito(cpf.substring(0, 9), pesoCPF);
+        Integer digito2 = calcularDigito(cpf.substring(0, 9) + digito1, pesoCPF);
+        return cpf.equals(cpf.substring(0, 9) + digito1.toString() + digito2.toString());
+    }
+
+    public static boolean validarMatricula(String matricula) {
+        if (matricula.matches("^[0-9]{8}$")) {
+            return true;
+        } else {
+            return false;
+
         }
     }
+
+    public static boolean validarEmail(String email) {
+        if (email.matches("^([0-9a-zA-Z]+([_.-]?[0-9a-zA-Z]+)*@[0-9a-zA-Z]+[0-9,a-z,A-Z,.,-]*(.){1}[a-zA-Z]{2,4})+$")) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
-
-
     
-
-
-
-
-
+    public static boolean validarSenha(String senha){
+         if (!senha.matches("^[0-9]+$")) {
+            return false;
+        }else{
+             return true;
+         }
+        
+    }
+}

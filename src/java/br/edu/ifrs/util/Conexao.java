@@ -17,7 +17,7 @@ public class Conexao {
     //dados para conexão do banco
     private static final String URL = "jdbc:mysql://localhost:3306/gabinete";//local do banco de dados
     private static final String USER = "root";//usuário e senha
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "root";
 
     /**
      * 

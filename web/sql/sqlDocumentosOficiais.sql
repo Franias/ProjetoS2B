@@ -1,4 +1,4 @@
-/*drop database gabinete;*/
+drop database gabinete;
 create database gabinete;
 /*Banco de dados base para o projeto final*/
 use gabinete;
@@ -75,8 +75,8 @@ insert into usuarios (cpf,siape,sexo,nome,username,email,senha,id_perfil)
 values ('02384516906',12345489,'F','eduarda','eduarda','eduarda@gmail.com',MD5('1234'),1);
 
 insert into usuarios (cpf,siape,sexo,nome,username,email,senha,id_perfil) 
-values ('92154876030',128454,'F','francielli','francielli','fran@gmail.com',MD5('1234'),2);
+values ('92154876030',12845498,'F','francielli','francielli','fran@gmail.com',MD5('1234'),2);
 
 insert into usuarios (cpf,siape,sexo,nome,username,email,senha,id_perfil) 
-values ('32407168950',144454,'M','andre','andre','andre@gmail.com',MD5('1234'),3);
+values ('32407168950',14445408,'M','andre','andre','andre@gmail.com',MD5('1234'),3);
 

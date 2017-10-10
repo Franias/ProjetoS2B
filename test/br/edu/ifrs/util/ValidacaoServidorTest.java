@@ -46,7 +46,7 @@ public class ValidacaoServidorTest {
      */
     @Test
     public void testValidarData() {
-        System.out.println("validarData");
+        System.out.println("Data Inválida");
         int dia = 31;
         int mes = 11;
         int ano = 2017;
@@ -59,7 +59,7 @@ public class ValidacaoServidorTest {
     
     @Test
     public void testValidarData2(){
-        System.out.println("validarData2");
+        System.out.println("Data Inválida");
         int dia = 31;
         int mes = 9;
         int ano = 2017;
@@ -72,7 +72,7 @@ public class ValidacaoServidorTest {
     
     @Test
     public void testValidarData3(){
-        System.out.println("validarData3");
+        System.out.println("Data Inválida");
         int dia = 29;
         int mes = 02;
         int ano = 2017;
@@ -83,7 +83,7 @@ public class ValidacaoServidorTest {
     
     @Test
     public void testValidarData4(){
-        System.out.println("validarData4");
+        System.out.println("Data Inválida");
         int dia = 30;
         int mes = 02;
         int ano = 2017;
@@ -94,7 +94,7 @@ public class ValidacaoServidorTest {
     
     @Test
     public void testValidarData5(){
-        System.out.println("validarData5");
+        System.out.println("Data Inválida");
         int dia = 31;
         int mes = 2;
         int ano = 2017;
@@ -105,7 +105,7 @@ public class ValidacaoServidorTest {
     
     @Test
     public void testValidarData6(){
-        System.out.println("validarData6");
+        System.out.println("Data Válida");
         int dia = 29;
         int mes = 2;
         int ano = 2016;

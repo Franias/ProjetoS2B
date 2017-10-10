@@ -57,8 +57,7 @@
                         <table border="1" cellpadding="1" cellspacing="0">
                             <tr>
                                 <th>ID</th>
-                                <th>Nome</th>
-                                <th>Descrição</th>
+                                <th>Número</th>
                                 <th>Situação</th>
                                 <th>Ações</th>
                             </tr>
@@ -70,8 +69,7 @@
                                 <td><input type="radio" id="id" name="id" value="<%=per[i].getId()%>" required></td>
                                 <td><%= per[i].getId()%></td>
                                 <td><%= per[i].getNome()%></td>
-                                <td><%= per[i].getDescricao()%></td>
-                                <td><%= per[i].getSituacao()%></td>
+                               <td><%= per[i].getSituacao()%></td>
                             </tr>
                             <%
                                 }

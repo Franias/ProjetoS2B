@@ -46,10 +46,8 @@ public class UsuarioTest {
      */
     @Test
     public void testSetCpf() throws Exception {
-        System.out.println("Cpf Valido");
+        System.out.println("Cpf Válido");
         String cpf = "29768130512";
-        Usuario instance = new Usuario();
-        instance.setCpf(cpf);
         boolean expResult = true;
         boolean result = ValidacaoServidor.validarCPF(cpf);
         assertEquals(expResult, result);
@@ -59,7 +57,7 @@ public class UsuarioTest {
     }
     @Test
     public void testSetCpfInvalidoBranco() throws Exception {
-        System.out.println("Cpf Invalido Branco");
+        System.out.println("Cpf Inválido Branco");
         String cpf = "";
         boolean expResult = false;
         boolean result = ValidacaoServidor.validarCPF(cpf);
@@ -68,21 +66,21 @@ public class UsuarioTest {
     
     @Test
      public void testSetCpfInvalidoLetras() throws Exception {
-        System.out.println("Cpf Invalido letras");
+        System.out.println("Cpf Inválido letras");
         String cpf = "asd";
         boolean expResult = false;
         boolean result = ValidacaoServidor.validarCPF(cpf);
         assertEquals(expResult, result);
     }
      
-    /* @Test
+     @Test
       public void testSetCpfInvalidoLetras2() throws Exception {
-        System.out.println("Cpf Invalido letras 11 digitos");
+        System.out.println("Cpf Inválido letras 11 digitos");
         String cpf = "aaaaaaaaaaa";
         boolean expResult = false;
         boolean result = ValidacaoServidor.validarCPF(cpf);
         assertEquals(expResult, result);
-    }*/
+    }
      
      @Test
       public void testSetCpfInvalidoNumeros() throws Exception {
@@ -138,7 +136,7 @@ public class UsuarioTest {
      */
     @Test
     public void testSetMatricula() throws Exception {
-        System.out.println("Matricula Valida");
+        System.out.println("Matricula Válida");
         String matricula = "10078965";
          boolean expResult = true;
         boolean result = ValidacaoServidor.validarMatricula(matricula);
@@ -148,7 +146,7 @@ public class UsuarioTest {
     }
       @Test
     public void testSetMatriculaInvalida() throws Exception {
-        System.out.println("Matricula Invalida");
+        System.out.println("Matricula Inválida");
         String matricula = "1234567";
          boolean expResult = false;
         boolean result = ValidacaoServidor.validarMatricula(matricula);
@@ -159,7 +157,7 @@ public class UsuarioTest {
     
       @Test
     public void testSetMatriculaInvalida2() throws Exception {
-        System.out.println("Matricula quantidade de numeros invalidos");
+        System.out.println("Matricula quantidade de numeros inválidos");
         String matricula = "123456789";
          boolean expResult = false;
         boolean result = ValidacaoServidor.validarMatricula(matricula);
@@ -180,16 +178,16 @@ public class UsuarioTest {
     }
     
     
-   /*   @Test
+     @Test
     public void testSetMatriculaInvalidaLetras() throws Exception {
-        System.out.println("Matricula Invalida Letras");
+        System.out.println("Matricula Inválida Letras");
         String matricula = "abcdefgh";
-         boolean expResult = false;
+        boolean expResult = false;
         boolean result = ValidacaoServidor.validarMatricula(matricula);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
-    }*/
+    }
     
     
     
@@ -260,15 +258,37 @@ public class UsuarioTest {
     /**
      * Test of setEmail method, of class Usuario.
      */
-    /* @Test
-    public void testSetEmail() {
-        System.out.println("setEmail");
-        String email = "";
-        Usuario instance = new Usuario();
-        instance.setEmail(email);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }*/
+     @Test
+    public void testSetEmail() throws Exception {
+        System.out.println("Email válido");
+        String email = "fulano@gmail.com";
+        boolean expResult = true;
+        boolean result = ValidacaoServidor.validarEmail(email);
+        assertEquals(expResult, result);
+        
+    }
+    
+    @Test
+    public void testSetEmail2() throws Exception {
+        System.out.println("Email válido");
+        String email = "fulano_fulano@gmail.com";
+        boolean expResult = true;
+        boolean result = ValidacaoServidor.validarEmail(email);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testSetEmailInvalido() throws Exception{
+        System.out.println("Email Inválido");
+        String email = "fulanofulanogmail.com";
+        boolean expResult = false;
+        boolean result = ValidacaoServidor.validarEmail(email);
+        assertEquals(expResult, result);
+        
+    }
+    
+    
+   
     /**
      * Test of getTelefoneResidencial method, of class Usuario.
      */
@@ -435,15 +455,42 @@ public class UsuarioTest {
     /**
      * Test of setSenha method, of class Usuario.
      */
-    /*@Test
+    @Test
     public void testSetSenha_String() {
-        System.out.println("setSenha");
+        System.out.println("Senha Inválida");
         String senha = "";
-        Usuario instance = new Usuario();
-        instance.setSenha(senha);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }*/
+        boolean expResult = false;
+        boolean result = ValidacaoServidor.validarSenha(senha);
+        assertEquals(expResult, result);
+        
+    }
+    
+    @Test 
+    public void testSetSenhaValida(){
+        System.out.println("Senha Válida");
+        String senha = "1234";
+        boolean expResult = true;
+        boolean result = ValidacaoServidor.validarSenha(senha);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testSetSenhaValida2(){
+        System.out.println("Senha Válida");
+        String senha = "12345678910";
+        boolean expResult = true;
+        boolean result = ValidacaoServidor.validarSenha(senha);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testSetSenhaInvalida(){
+        System.out.println("Senha Inválida");
+        String senha = "abc";
+        boolean expResult = false;
+        boolean result = ValidacaoServidor.validarSenha(senha);
+        assertEquals(expResult, result);
+    }
     /**
      * Test of setSenha method, of class Usuario.
      */
