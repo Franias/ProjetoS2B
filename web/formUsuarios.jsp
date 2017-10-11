@@ -110,7 +110,7 @@
                             <input type="password" name="senha" class="q_cad input_texto" required
                                    id="senha" size="20">
 
-                            <label for="confsenha" class="l_cad">Confimar Senha: </label>
+                            <label for="confsenha" class="l_cad">*Confimar Senha: </label>
                             <input type="password" class="q_cad"
                                    name="confsenha" id="confsenha" size="20">
                             <%
